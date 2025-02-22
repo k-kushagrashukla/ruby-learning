@@ -365,7 +365,7 @@ end
 ## For loops
 The `for` loop in Ruby is used to iterate over a range or collection.
 ```ruby
-friends = ["Aman", "Ankur", "Arnav", "Animesh"]
+friends = ["Aman", "Ankur", "Arnav", "Animesh","astha(tomu)","sakshi"]
 
 for friend in friends
   puts friend
