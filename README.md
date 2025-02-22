@@ -115,4 +115,332 @@ age=gets.chomp
 puts " My name is #{name} and my age is #{user_age} and i'm greatest of all time :)."
 ```
 `gets.chomp` : removes new line character.
+
 `#{}` : Used for string interpolation.
+
+## Kid's calculator 
+```ruby
+puts "enter a number"
+num1=gets.chomp
+puts "enter a 2nd number"
+num2=gets.chomp
+
+puts num1+num2
+puts (num1.to_i + num2.to_i)
+```
+- `to_i` : convert strings to an integer.
+## Actual calculator :)
+```ruby
+puts "Welcome to Kushagra's calculator
+puts "ENTER FIRST NUMBER : "
+num1=gets.chomp.to_f
+
+puts "ENTER SECOND NUMBER :"
+num2=gets.chomp.to_f
+
+result=case operator
+       when "+"
+         num1+ num2
+       when "-"
+         num1-num2
+       when "*"
+         num1*num2
+       when "/"
+         num2==0 ? 'ERROR ! DIVSION BY ZERO. : num1/num2
+       else
+         "Invalid Operator"
+       end
+puts "Result: #{result}"
+```
+- to_f : Convert string to float.
+## Array
+An array in ruby is an ordered, indexed collection of elements that can store multiple values in a single variable. It can hold diiferent data types, including integers, strings and even other arrays.
+```ruby
+arr = [1, "hello", 3.14, true]
+# array with different data types
+```
+```ruby
+girlfriends=["no","girlfiends","only","friends"] 😭
+puts girlfriends
+puts girlfriends[0]
+puts girlfriends[-1]
+puts girlfirends[0,2]
+
+# Modifying an array
+girlfriends[0]="shradhha"
+puts girlfriends[0]
+puts girlfriends
+
+# Working with an empty array
+Friends=Array.new
+friends[0]="ankur"
+friends[1]="aman"
+friends[2]="arnav"
+friends[3]="animesh"
+
+puts friends.length()
+puts friends.include?("animesh")
+puts friends.reverse()
+puts friends.sort()
+```
+## Hashes
+A hash in ruby is a collection of key-value pairs , similar to a dictionary in other languages.
+unlike arrays, which use numeric indexes, hashes use keys to access values.
+```ruby
+person={"name"=>"kushagra","age"=>21,"city"=>"kanpur","girlffriend="no girlfriend"}
+puts person["name"]
+
+person = { name: "kushagra", age: 21, city: "kanpur" }
+puts person[:age]
+```
+- So basically hashes are used to store data in key value pairs.
+- You can use symbols (:key) or strings ("key") as keys.
+
+## Ruby Methods
+- Methods aur nothing but functions.
+- So methods in ruby are block of code to perform some specific tasks.
+- They can accept parameters and retirn values.
+
+```ruby
+def say_hi
+  puts "hello kushagra"
+end
+
+say_hi
+
+def girlfriend
+  puts "no girlfriend"
+end
+
+girlfriend #calling the method
+```
+## Method with parameter
+```ruby
+def say_hi_to(name,age,relationship)
+  puts "hello #{name}, your age is #{age} and your relationship status is #{relationship}
+end
+
+say_hi_to("Kushagra",21,"Single")
+```
+## Method with default parameter
+```ruby
+def say_hi_to(name="no name",age=3,relationship="khush hun bhut zyada :) )
+   puts "hello #{name}, your age is #{age} and your relationship status is #{relationship}
+end
+
+say_hi_to("kushagra")
+```
+```ruby
+def cube_number(number)
+  cubed_value = number**3
+  return cubed_value
+end
+
+puts cube_number(5)
+```
+## Conditional statements
+Conditional statements are used to execute different blocks of code based on conditions.
+
+## `if` Statement
+```ruby
+age = 18
+
+if age >= 18
+  puts "You are an adult."
+end
+```
+## `if-else` Statement
+```ruby
+age = 16
+
+if age >= 18
+  puts "You can vote."
+else
+  puts "You cannot vote."
+end
+```
+## `if-elsif-else` Statement
+```ruby
+marks = 85
+
+if marks >= 90
+  puts "Grade: A"
+elsif marks >= 75
+  puts "Grade: B"
+elsif marks >= 50
+  puts "Grade: C"
+else
+  puts "Failed"
+end
+```
+## Using comparisions in `if` Statements
+```ruby
+def max_number(n1, n2, n3)
+  if n1 >= n2 && n1 >= n3
+    puts "n1 is the greatest"
+    return n1
+  elsif n2 >= n1 && n2 >= n3
+    puts "n2 is the greatest"
+    return n2
+  else
+    puts "n3 is the greatest"
+    return n3
+  end
+end
+
+puts max_number(10, 20, 30)
+```
+## Case statement
+The case statement in Ruby is similar to switch in other languages. It is used for multi-way branching, making the code cleaner when dealing with multiple conditions.
+
+```ruby
+def get_day_name(day)
+  day_name = ""
+
+  case day
+  when "mon"
+    day_name = "Monday"
+  when "tue"
+    day_name = "Tuesday"
+  when "wed"
+    day_name = "Wednesday"
+  when "thurs"
+    day_name = "Thursday"
+  when "fri"
+    day_name = "Friday"
+  when "sat"
+    day_name = "Saturday"
+  when "sun"
+    day_name = "Sunday"
+  else
+    day_name = "Invalid day"
+  end 
+
+  return day_name
+end
+
+puts get_day_name(gets.chomp())
+```
+## Comparision Operators
+Support Various comparision operators :
+- `!=` (not equal)
+- `==` (equal)
+- `>` (greater than)
+- `<` (less than)
+- `>=` (greater than or equal to)
+- `<=` (less than or equal to)
+
+## Comments
+Comments are used to add explanations or notes in code. They do not affect program execution and help improve readability.
+1) Single line comment (`#`)
+```ruby
+# This is a single-line comment
+puts "Hello, Shradhha ji how are you ??
+```
+2) Multi-line comment (`=begin` and `=end`)
+```ruby
+=begin
+This is a 
+multi-line comment.
+It can span multiple lines.
+=end
+puts "python pyaar hai lekin ruby one sided pyaar 👨‍💻"
+```
+## While loop
+The `while` loop repeats a block of code as long as a given condition is true.
+```ruby
+i = 0
+while i < 5
+  puts i
+  i += 1
+end
+```
+```ruby
+i = 0
+while i < 12
+  puts i if i % 2 == 0
+  i += 1
+end
+```
+## For loops
+The `for` loop in Ruby is used to iterate over a range or collection.
+```ruby
+friends = ["Aman", "Ankur", "Arnav", "Animesh"]
+
+for friend in friends
+  puts friend
+end
+```
+```ruby
+for i in 0..5
+  puts i
+end
+```
+## Using Times Iterator
+Print numbers from 0 to 5 using the times iterator.
+```ruby
+8.times do |index|
+  puts index
+end
+```
+Output :
+```ruby
+0
+1
+2
+3
+4
+5
+6
+7
+```
+## Exception handling
+- Exception handling in Ruby is done using `begin`, `rescue`
+- It helps prevent program crashes by handling runtime errors gracefully.
+```ruby
+begin
+  num = 10 / 0  # This will cause a ZeroDivisionError
+rescue ZeroDivisionError
+  puts "Cannot divide by zero!"
+end
+```
+- Handling Multi[ple Executions
+```ruby
+begin
+  arr = [1, 2, 3]
+  puts arr[5]  # This will cause an IndexError
+rescue ZeroDivisionError
+  puts "Cannot divide by zero!"
+rescue IndexError
+  puts "Index out of bounds!"
+end
+```
+---
+## Guessing game
+A simple game which you can show to your little brother and sister 😂.
+```ruby
+secret_word = "godlevel"
+guess = ""
+guess_count = 0
+
+while guess != secret_word && guess_count < 10
+  puts "Enter the guess word:"
+  guess = gets.chomp
+  guess_count += 1
+  puts "Guesses left: #{10 - guess_count}"
+end
+
+if guess_count < 10
+  puts "You guessed it in #{guess_count} attempts!"
+else
+  puts "You lost! The correct word was '#{secret_word}'."
+end
+```
+output:
+```ruby
+Input: "godlevel"
+Output: "You guessed it in 1 attempts!"
+```
+♥️ Dil se dhanyavaad padhne ke liye :)
+
+![vk2](https://github.com/user-attachments/assets/b7ccb7ad-323b-4c85-9cb1-9860dd0b88c5)
