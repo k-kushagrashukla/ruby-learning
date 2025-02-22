@@ -152,7 +152,7 @@ result=case operator
        end
 puts "Result: #{result}"
 ```
-- to_f : Convert string to float.
+- `to_f` : Convert string to float.
 ## Array
 An array in ruby is an ordered, indexed collection of elements that can store multiple values in a single variable. It can hold diiferent data types, including integers, strings and even other arrays.
 ```ruby
