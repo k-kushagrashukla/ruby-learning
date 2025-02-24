@@ -478,6 +478,42 @@ puts s1.get_name
 s1.set_name("animesh")
 puts s1.get_name
 ```
+## Oops
+## Encapsulation
+Wrapping data and methods into single unit (class).
+```ruby
+class Person
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+
+  def display
+    puts "Name: #{@name}, Age: #{@age}"
+  end
+end
+
+p1 = Person.new("shradhha", 33)
+p1.display
+```
+## Inheritance
+Allows class to inherit methods and parameters from another class.
+```ruby
+class Animal
+  def speak
+    puts "Animal makes a sound"
+  end
+end
+
+class Dog < Animal
+  def speak
+    puts "Dog barks"
+  end
+end
+
+d = Dog.new
+d.speak  # Output: Dog barks
+```
 ---
 ## Guessing game
 A simple game which you can show to your little brother and sister 😂.
