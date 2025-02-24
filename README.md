@@ -415,6 +415,69 @@ rescue IndexError
   puts "Index out of bounds!"
 end
 ```
+## Classes 
+- In ruby classes are blueprints for creating an object 👨‍💻
+- A class can be defined by class keyword.
+example :
+```ruby
+class car
+ def initialize(brand,model)
+ @brand=brand
+ @model=model
+end
+
+def details
+  puts "car brand : #{@brand} , car model : #{@model}.
+ end
+end
+```
+Another example :
+```ruby
+class book
+ def initialize(title,author,pages)
+  @title=title
+  @author=author
+  @pages=pages
+ end
+end
+
+book1=book.new("harry potter","jk rowling",500)
+puts book1.title
+
+book2=book2.new("introvert","kushagra",800)
+puts book1.author
+```
+## Objects
+- Objects are the instance of the class.
+- An object is created using the new method
+
+```ruby
+car1=car.new("tesla","model s")
+car1.details
+# car brand : tesla , car model : model s.
+```
+## getter and setter methods
+```ruby
+class student
+ def initialzie(name,grade)
+ @name=name
+ @grade=grade
+end
+
+def get_name
+ @name
+end
+
+def set_name(new_name)
+  @name=new_name
+  end
+end
+
+s1=student.new("kushagra",A)
+puts s1.get_name
+s1.set_name("animesh")
+puts s1.get_name
+```
 ---
 ## Guessing game
 A simple game which you can show to your little brother and sister 😂.
