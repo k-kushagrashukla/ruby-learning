@@ -540,6 +540,6 @@ output:
 Input: "godlevel"
 Output: "You guessed it in 1 attempts!"
 ```
-♥️ Dil se dhanyavaad padhne ke liye :)
+if you like it then drop a star :)
 
 ![vk2](https://github.com/user-attachments/assets/b7ccb7ad-323b-4c85-9cb1-9860dd0b88c5)
